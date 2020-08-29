@@ -1,32 +1,26 @@
 <?php
 
-/**
- * Configuration for DEVELOPMENT environment
- * To create another configuration set just copy this file to config.production.php etc. You get the idea :)
- */
 
-/**
- * Configuration for: Error reporting
- * Useful to show every little problem during development, but only show hard / no errors in production.
- * It's a little bit dirty to put this here, but who cares. For development purposes it's totally okay.
- */
+//* Configuration for DEVELOPMENT environment
+//* To create another configuration set just copy this file to config.production.php etc. You get the idea :)
+//* Configuration for: Error reporting
+//* Useful to show every little problem during development, but only show hard / no errors in production.
+//* It's a little bit dirty to put this here, but who cares. For development purposes it's totally okay.
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-/**
- * Configuration for cookie security
- * Quote from PHP manual: Marks the cookie as accessible only through the HTTP protocol. This means that the cookie
- * won't be accessible by scripting languages, such as JavaScript. This setting can effectively help to reduce identity
- * theft through XSS attacks (although it is not supported by all browsers).
- *
- * @see php.net/manual/en/session.configuration.php#ini.session.cookie-httponly
- */
+
+//* Configuration for cookie security
+//* Quote from PHP manual: Marks the cookie as accessible only through the HTTP protocol. This means that the cookie
+//* won't be accessible by scripting languages, such as JavaScript. This setting can effectively help to reduce identity
+//* theft through XSS attacks (although it is not supported by all browsers).
+//*
+//* @see php.net/manual/en/session.configuration.php#ini.session.cookie-httponly
+
 ini_set('session.cookie_httponly', 1);
 
-/**
- * Returns the full configuration.
- * This is used by the core/Config class.
- */
+//* Returns the full configuration.
+//* This is used by the core/Config class.
 return array(
     /**
      * Configuration for: Base URL
@@ -38,13 +32,13 @@ return array(
      * Configuration for: Folders
      * Usually there's no reason to change this.
      */
-    'PATH_CONTROLLER' => realpath(dirname(__FILE__).'/../../') . '/application/controller/',
-    'PATH_VIEW' => realpath(dirname(__FILE__).'/../../') . '/application/view/',
+    'PATH_CONTROLLER' => realpath(dirname(__FILE__) . '/../../') . '/application/controller/',
+    'PATH_VIEW' => realpath(dirname(__FILE__) . '/../../') . '/application/view/',
     /**
      * Configuration for: Avatar paths
      * Internal path to save avatars. Make sure this folder is writable. The slash at the end is VERY important!
      */
-    'PATH_AVATARS' => realpath(dirname(__FILE__).'/../../') . '/public/avatars/',
+    'PATH_AVATARS' => realpath(dirname(__FILE__) . '/../../') . '/public/avatars/',
     'PATH_AVATARS_PUBLIC' => 'avatars/',
     /**
      * Configuration for: Default controller and action
@@ -64,8 +58,8 @@ return array(
     'DB_TYPE' => 'mysql',
     'DB_HOST' => '127.0.0.1',
     'DB_NAME' => 'huge',
-    'DB_USER' => 'root',
-    'DB_PASS' => '12345678',
+    'DB_USER' => 'phpUser',
+    'DB_PASS' => 'mHill8268l',
     'DB_PORT' => '3306',
     'DB_CHARSET' => 'utf8',
     /**
